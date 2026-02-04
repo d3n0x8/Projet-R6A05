@@ -11,6 +11,7 @@ exports.deployment = async ({ start } = {}) => {
 
     if (start) {
         await Exiting.createManager(server).start();
+        console.log(`Server started at ${server.info.uri}`);
         server.log(['start'], `Server started at ${server.info.uri}`);
         return server;
     }
