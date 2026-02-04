@@ -44,8 +44,7 @@
     "eslint": "7.x.x",
     "exiting": "6.x.x",
     "knex": "0.21.x",
-    "sqlite3": "5.x.x"
-    "exiting": "6.x.x",
+    "sqlite3": "5.x.x",
     "hapi-swagger": "14.x.x"
   }
 }
