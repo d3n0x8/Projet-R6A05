@@ -45,10 +45,13 @@ module.exports = new Confidence.Store({
                     $base: {
                         migrateOnStart: true,
                         knex: {
-                            client: 'sqlite3',
-                            useNullAsDefault: true,     // Suggested for sqlite3
+                            client: 'mysql',
                             connection: {
-                                filename: ':memory:'
+                                host: process.env.DB_HOST || '0.0.0.0',
+                                user: process.env.DB_USER || 'root',
+                                password: process.env.DB_PASSWORD || 'hapi',
+                                database: process.env.DB_DATABASE || 'user',
+                                port: process.env.DB_PORT || 3306
                             },
                             migrations: {
                                 stub: Schwifty.migrationsStubPath
