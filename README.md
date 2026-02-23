@@ -80,13 +80,8 @@ Pour s'authentifier dans Swagger : se connecter via `POST /user/login`, copier l
 ### Passer un utilisateur en admin
 
 ```bash
-mysql -u root -p -e "UPDATE \`user\`.\`user\` SET scope = '[\"user\",\"admin\"]' WHERE mail = 'votre@mail.com';"
-```
-
-### RabbitMQ (export CSV)
-
-```bash
-brew install rabbitmq && brew services start rabbitmq
+docker exec hapi-mysql mysql -u root -phapi \
+  -e "UPDATE \`user\`.\`user\` SET scope = '[\"user\",\"admin\"]' WHERE mail = 'votre@mail.com';"
 ```
 
 ---
