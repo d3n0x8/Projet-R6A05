@@ -16,12 +16,17 @@
   },
   "dependencies": {
     "@hapi/boom": "9.x.x",
+    "@hapi/jwt": "^3.2.3",
     "@hapipal/haute-couture": "4.x.x",
     "@hapipal/schmervice": "^3.0.0",
     "@hapipal/schwifty": "6.x.x",
+    "amqplib": "^0.10.9",
+    "bcrypt": "^6.0.0",
     "exiting": "6.0.1",
     "joi": "17.x.x",
     "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^8.0.1",
     "objection": "2.x.x",
     "sqlite3": "^5.1.7"
   },
